@@ -12,7 +12,7 @@ with open('conf.json') as f:
 
 domo = Domo(**CONF["creds"])
 
-data = pd.read_csv('https://zendesk.sweethawk.co/app/survey/responses.csv?user_token=mmNzdrXqGuJR3VKAog39UCT8')
+data = pd.read_csv(CONF["csv_url"])
 data['date'] = pd.to_datetime(data['date'])
 data['reason'] = data['reason'].replace(np.nan, '')
 data['nps_reason'] = data['nps_reason'].replace(np.nan,'')

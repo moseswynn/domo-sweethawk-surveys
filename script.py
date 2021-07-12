@@ -1,4 +1,3 @@
-#!/home/a683040/domo-sweethawk-surveys/.venv/bin/python3
 import pandas as pd
 import numpy as np
 from pydomo import Domo
